@@ -3,7 +3,7 @@
 
 *FastProwl* is a Ruby library for interacting with the Prowl API **using Typhoeus** (a libcurl-multi interface written in Ruby). It is inspired heavily by [August Lilleaas](http://august.lilleaas.net/)'s [ruby-prowl](http://github.com/augustl/ruby-prowl) library (the class method `FastProwl.add()` still works if you include this library instead).
 
-*FastProwl* lets you queue up many Prowl API requests then make them concurrently, which is handy if you make a bunch of requests in quick succession. It was developed for [Prey Fetcher](http://preyfetcher.com), which sends too many notifications requests to wait on blocking HTTP calls.
+*FastProwl* lets you queue up many Prowl API requests then make them concurrently, which is handy if you make a bunch of requests in quick succession. It was developed for [Prey Fetcher](http://preyfetcher.com), which sends too many notification requests to wait on blocking HTTP calls.
 
 Please fork away and send me a pull request if you think you can make it better or whatnot.
 
