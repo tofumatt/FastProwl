@@ -48,16 +48,15 @@ class FastProwl
     @hydra.queue(request('verify'))
   end
   
-  # Send a single Prowl notification _immediately_ (don't queue it in
-  # the Hydra). Returns the response code of the action
+  # Send a single Prowl notification _immediately_.
   def self.add(params = {})
     prowl = new
     prowl.add(params)
     prowl.run
   end
   
-  # Send a single Prowl notification _immediately_ (don't queue it in
-  # the Hydra). Returns the response code of the action
+  # Verify a Prowl API key _immediately_. Returns true if the key is
+  # valid; false otherwise.
   def self.verify(apikey)
     prowl = new(:apikey => apikey)
     prowl.valid?
