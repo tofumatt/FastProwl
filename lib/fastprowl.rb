@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'typhoeus'
 
+# Create a FastProwl instance and iPhone-spam away via Prowl! ;-)
 class FastProwl
   
   class MissingAPIKey < Exception; end
@@ -89,17 +90,19 @@ class FastProwl
       params[:apikey] = params[:apikey].collect{|v| v + ','}.to_s.chop
     end
     
-    # Return the request (to either a Hydra or a quick Typhoeus action)
+    # Make the request
     req = Typhoeus::Request.new(API_URL + action,
       :user_agent => @user_agent,
       :method => (action == 'add') ? :post : :get,
       :params => (action == 'add') ? params : {:apikey => params[:apikey]}
     )
     
+    # Typhoeus request on_complete method adds the HTTP code to an array
     req.on_complete do |response|
       @responses << response.code
     end
     
+    # Return the request
     req
   end
   
