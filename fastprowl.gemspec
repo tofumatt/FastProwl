@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary = "Ruby Prowl library that uses libcurl-multi for parallel requests"
   s.homepage = "http://github.com/tofumatt/FastProwl"
   s.files = FileList['lib/*.rb', '[A-Z]*', 'fastprowl.gemspec', 'test/*.rb'].to_a
-  s.test_file = 'test/fastprowl.rb'
+  s.test_file = 'test/fastprowl_test.rb'
   s.add_dependency('typhoeus')
   s.add_development_dependency('mocha') # Used to run the tests, that's all...
 end
