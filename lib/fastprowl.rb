@@ -10,7 +10,7 @@ class FastProwl
   API_URL = 'https://prowl.weks.net/publicapi/'
   PRIORITY_RANGE = -2..2
   # You can change this using the user_agent() method
-  USER_AGENT = 'FastProwl 0.1 (http://github.com/tofumatt/FastProwl)'
+  USER_AGENT = 'FastProwl 0.2 (http://github.com/tofumatt/FastProwl)'
   
   # Supply Prowl defaults in a hash (:apikey, :providerkey, etc.), along
   # with optional Typhoeus Hydra options.
