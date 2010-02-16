@@ -1,9 +1,8 @@
-require 'test/unit'
-
 $LOAD_PATH << File.expand_path("#{File.dirname(__FILE__)}/../lib")
 require 'fastprowl'
 
 require 'rubygems'
+require 'test/unit'
 require 'mocha'
 
 class FastProwlTest < Test::Unit::TestCase
