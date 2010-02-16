@@ -91,16 +91,16 @@ class FastProwl
     
     # Return the request (to either a Hydra or a quick Typhoeus action)
     req = Typhoeus::Request.new(API_URL + action,
-			:user_agent => @user_agent,
-			:method => (action == 'add') ? :post : :get,
-			:params => (action == 'add') ? params : {:apikey => params[:apikey]}
-		)
-		
-		req.on_complete do |response|
-		  @responses << response.code
-		end
-		
-		req
+      :user_agent => @user_agent,
+      :method => (action == 'add') ? :post : :get,
+      :params => (action == 'add') ? params : {:apikey => params[:apikey]}
+    )
+    
+    req.on_complete do |response|
+      @responses << response.code
+    end
+    
+    req
   end
   
   # Check to see if any notifications succeeded. Like the Prowl API with multiple
