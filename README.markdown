@@ -35,7 +35,7 @@ As mentioned, this is the same as using [ruby-prowl](http://github.com/augustl/r
 If you want to send concurrent requests (presumably you do), create an instance object and use the `add()` method to queue up your requests. When all of your requests are ready, use the `run()` method to send all of your queued notifications:
 
 	# You can put any attributes you want in the constructor
-	# to save repeatly supplying them when you call add()
+	# to save repeatedly supplying them when you call add()
 	prowl = FastProwl.new(
 	  :application => 'Car Repair Shop',
 	  :event => 'Your car has been ready for ages!',
