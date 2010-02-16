@@ -33,6 +33,16 @@ class FastProwlTest < Test::Unit::TestCase
     assert FastProwl.add(:apikey => VALID_API_KEY, :application => APPLICATION, :event => 'test_valid_api_key', :description => "This should work.")
   end
   
+  # Test an invalid API key
+  def test_invalid_api_key
+    assert !FastProwl.verify(BAD_API_KEY)
+  end
+  
+  # Verify an API key
+  def test_verify_api_key
+    assert FastProwl.verify(VALID_API_KEY)
+  end
+  
   # Concurrency test -- try to send a bunch of notifications
   def test_multi
     prowl = FastProwl.new

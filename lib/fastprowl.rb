@@ -42,11 +42,24 @@ class FastProwl
     @user_agent = user_agent
   end
   
+  # Queue a verify API call in the Hydra.
+  def valid?
+    @hydra.queue(request('verify'))
+  end
+  
   # Send a single Prowl notification _immediately_ (don't queue it in
   # the Hydra). Returns the response code of the action
   def self.add(params = {})
     prowl = new
     prowl.add(params)
+    prowl.run
+  end
+  
+  # Send a single Prowl notification _immediately_ (don't queue it in
+  # the Hydra). Returns the response code of the action
+  def self.verify(apikey)
+    prowl = new(:apikey => apikey)
+    prowl.valid?
     prowl.run
   end
   
