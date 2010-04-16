@@ -9,13 +9,9 @@ Please fork away and send me a pull request if you think you can make it better 
 
 ## Installation
 
-Assuming you have [Gemcutter](http://gemcutter.org/) setup as a gem source, install like any other Ruby gem:
+Install with RubyGems:
 
 	gem install fastprowl
-
-If you don't already have [Gemcutter](http://gemcutter.org/) setup as one of your gem sources, install FastProwl with the following command:
-
-	gem install fastprowl --source http://gemcutter.org/
 
 You'll need [Paul Dix](http://www.pauldix.net/)'s [Typhoeus](http://github.com/pauldix/typhoeus), which will automatically install as a dependency, but does require a reasonably current version of [libcurl](http://curl.haxx.se/libcurl/) installed. Check out the [Typhoeus README](http://github.com/pauldix/typhoeus/blob/master/README.textile) for more info. If you're having trouble getting that to work and just need a simple Prowl library with no dependancies/native extensions, check out [ruby-prowl](http://github.com/augustl/ruby-prowl).
 
