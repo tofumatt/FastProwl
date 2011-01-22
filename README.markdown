@@ -50,8 +50,8 @@ You get the idea.
 
 ## License
 
-This program is free software; it is distributed under an [MIT-style License](http://fosspass.org/license/mit?author=Matthew+Riley+MacPherson&year=2010).
+This program is free software; it is distributed under an MIT-style License.
 
 ---
 
-Copyright (c) 2010 [Matthew Riley MacPherson](http://lonelyvegan.com).
+Copyright (c) 2011 [Matthew Riley MacPherson](http://lonelyvegan.com).
