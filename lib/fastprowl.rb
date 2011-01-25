@@ -11,7 +11,7 @@ class FastProwl
   API_URL = 'https://prowl.weks.net/publicapi/'
   PRIORITY_RANGE = -2..2
   # You can change this using the user_agent() method
-  USER_AGENT = 'FastProwl 0.2 (http://github.com/tofumatt/FastProwl)'
+  USER_AGENT = 'FastProwl 0.3 (http://github.com/tofumatt/FastProwl)'
   
   # Supply Prowl defaults in a hash (:apikey, :providerkey, etc.), along
   # with optional Typhoeus Hydra options.
@@ -86,8 +86,11 @@ class FastProwl
     
     # If there are multiple API Keys in an array, merge them into a comma-delimited string
     if params[:apikey].is_a?(Array)
-      params[:apikey] = params[:apikey].collect{|v| v + ','}.to_s.chop
+      params[:apikey] = params[:apikey].collect{|v| v + ',' }.to_s.chop
     end
+    
+    # Delete any empty key/value sets
+    params.delete_if {|key, value| value.nil? }
     
     # Make the request
     req = Typhoeus::Request.new(API_URL + action,

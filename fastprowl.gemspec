@@ -2,7 +2,7 @@ require 'rake'
 
 Gem::Specification.new do |s|
   s.name = "fastprowl"
-  s.version = "0.2"
+  s.version = "0.3"
   s.date = Time.now
   s.authors = ["Matthew Riley MacPherson"]
   s.email = "matt@lonelyvegan.com"
